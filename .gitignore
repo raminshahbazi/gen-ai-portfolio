@@ -1,41 +1,68 @@
-# LaTeX intermediate and output files
-*.aux
-*.bbl
-*.blg
-*.brf
-*.dvi
-*.log
-*.nav
-*.out
-*.ps
-*.snm
-*.toc
-*.vrb
+# Compiled PDF files
+*.pdf
 
-# LaTeX editor and IDE files
+# Auxiliary and log files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
 *.fls
+*.blg
+*.bbl
 *.fdb_latexmk
 *.synctex.gz
-*.synctex(busy)
-*.pdfsync
-*.gz
+*.dvi
+*.ps
 
-# Other LaTeX related files
-*.acn
-*.acr
-*.alg
+# Temporary files
+*.tmp
+*.backup
+*.sav
+*.bak
+
+# Editor backup files
+*~
+*.swp
+*.swo
+
+# Generated files
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Glossary and index files
 *.glg
 *.glo
 *.gls
+*.glsdefs
 *.ist
+*.acn
+*.acr
+*.alg
+*.idx
+*.ind
+*.ilg
 
-# Output files
-*.pdf
-*.xdv
+# BibTeX and bibliography files
+*.bcf
+*.run.xml
 
-# Temporary files
-*~
+# Latexmk output
+*.fdb_latexmk
+*.synctex.gz
 
-# Directories
-auto/
-_build/
+# TeXWorks specific
+*.pdfsync
+
+# VS Code settings and workspace files
+.vscode/
+
+# TeXStudio specific
+*.txsoutput
+
+# Overleaf project files
+*.synctex
+*.blg
