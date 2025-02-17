@@ -1,0 +1,41 @@
+# LaTeX intermediate and output files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.dvi
+*.log
+*.nav
+*.out
+*.ps
+*.snm
+*.toc
+*.vrb
+
+# LaTeX editor and IDE files
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+*.gz
+
+# Other LaTeX related files
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+
+# Output files
+*.pdf
+*.xdv
+
+# Temporary files
+*~
+
+# Directories
+auto/
+_build/
