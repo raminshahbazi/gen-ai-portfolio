@@ -3,8 +3,8 @@
 % Adjust margins for a smaller layout
 \usepackage[margin=1in]{geometry}
 
-\title{Review of Articles}
-\author{Firstname Lastname}
+\title{Prompt Engineering}
+\author{Ramin Shahbazi}
 \date{\today}
 
 \begin{document}
@@ -15,17 +15,54 @@
 Below is a list of six articles:
 
 \begin{enumerate}
-    \item Article 1: \textit{Title of the First Article}
-    \item Article 2: \textit{Title of the Second Article}
-    \item Article 3: \textit{Title of the Third Article}
-    \item Article 4: \textit{Title of the Fourth Article}
-    \item Article 5: \textit{Title of the Fifth Article}
-    \item Article 6: \textit{Title of the Sixth Article}
+    \item \textit{A Systematic Survey of Automatic Prompt Optimization Techniques}
+    \item \textit{Automatic Prompt Optimization via Heuristic Search: A Survey}
+    \item \textit{Bandit-Based Prompt Design Strategy Selection Improves Prompt Optimizers}
+    \item \textit{Same Question, Different Words: A Latent Adversarial Framework for Prompt Robustness}
+    \item \textit{Jailbreaking is (Mostly) Simpler Than You Think}
+    \item \textit{Cognitive Bias Detection Using Advanced Prompt Engineering}
+
 \end{enumerate}
 
 \newpage
 
 \section{My Review of the Articles}
-This is where you will write your review for each of the articles listed above. The review can include your thoughts, analysis, strengths and weaknesses of each article, and any other relevant information.
+
+Large Language Models (LLMs) are becoming more powerful, but they still have challenges. Researchers are working on improving how prompts are designed, making AI more reliable, and preventing safety risks. This review looks at studies on prompt optimization, making AI responses more stable, stopping jailbreak attacks, and detecting bias in AI and human-generated content.
+
+\subsection{Making Prompts Work Better}
+\subsubsection{Automating Prompt Optimization}
+Instead of manually testing different prompts, researchers are developing Automatic Prompt Optimization (APO) to improve LLMs. This means using smart techniques like heuristic search and reinforcement learning to make better prompts without human effort. These methods help LLMs perform better across different tasks while keeping them safe and reliable.
+
+\subsubsection{Using Heuristic Search to Improve Prompts}
+Another study explores how heuristic search can refine prompts, using approaches like soft prompt optimization (adjusting LLM embeddings) and discrete prompt optimization (applying rules and search algorithms). This helps LLMs adapt to different tasks while reducing errors and unnecessary adjustments.
+
+\subsubsection{Choosing the Best Strategy for Prompt Optimization}
+A new method uses multi-armed bandits (a decision-making technique) to pick the best prompt improvement strategy. This method, called OPTS, helps LLMs make better choices about which prompt style to use, boosting performance by up to 50% in tests. Instead of applying multiple strategies at once (which can cause issues), this approach ensures that only the most effective technique is used.
+
+\subsection{Making AI More Robust and Stable}
+\subsubsection{Handling Slight Changes in Prompts}
+One big issue with LLMs is that changing a few words in a prompt can lead to different answers. A new approach, Latent Adversarial Paraphrasing (LAP), helps AI stay consistent even when prompts are reworded. It works by training the model to handle tricky rewordings, making AI answers more stable.
+
+\subsection{AI Safety and Stopping Jailbreak Attacks}
+\subsubsection{How Easy It Is to Bypass AI Safety}
+Some AI models have safety features, but attackers can trick them using a technique called Context Compliance Attack (CCA). Instead of complicated hacking, attackers manipulate the conversation history to make AI think it has already agreed to provide restricted information. Tests on GPT-4, Claude, Gemini, and Llama show that most models are vulnerable, except Llama-2, which resisted the attack better. Researchers suggest better conversation tracking and digital signatures to stop these tricks.
+
+\subsection{Detecting Bias in AI and Human Texts}
+\subsubsection{Using Prompts to Spot Bias}
+Another problem in AI is bias in responses. A study introduced structured prompt engineering to help LLMs detect bias in news, social media, and reports. The system identified six common biases, like confirmation bias and circular reasoning, and achieved 96-100% accuracy. Surprisingly, smaller models with better prompts outperformed larger models like Llama-3 70B. This shows that how you design the prompt matters more than just using a bigger AI.
+
+\section{Conclusion}
+These studies show that researchers are working hard to make LLMs more effective, safer, and fairer:
+
+Automatic Prompt Optimization can replace trial-and-error with smart automation.
+
+Making AI more robust ensures that slight changes in wording don’t cause unpredictable answers.
+
+AI safety remains a challenge, as simple tricks can still bypass restrictions.
+
+Detecting bias with structured prompts is a powerful way to make AI fairer.
+
+Looking ahead, researchers will need to combine these strategies, making AI both smarter and safer for real-world applications.
 
 \end{document}
