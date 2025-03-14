@@ -3,8 +3,8 @@
 % Adjust margins for a smaller layout
 \usepackage[margin=1in]{geometry}
 
-\title{Review of Articles}
-\author{Firstname Lastname}
+\title{Multi-agent LLM Systems}
+\author{Ramin Shahbazi}
 \date{\today}
 
 \begin{document}
@@ -15,17 +15,40 @@
 Below is a list of six articles:
 
 \begin{enumerate}
-    \item Article 1: \textit{Title of the First Article}
-    \item Article 2: \textit{Title of the Second Article}
-    \item Article 3: \textit{Title of the Third Article}
-    \item Article 4: \textit{Title of the Fourth Article}
-    \item Article 5: \textit{Title of the Fifth Article}
-    \item Article 6: \textit{Title of the Sixth Article}
+    \item \textit{Multi-Agent Verification: Scaling Test-Time Compute with Multiple Verifiers}
+    \item \textit{MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents}
+    \item \textit{Parallelized Planning-Acting for Efficient LLM-based Multi-Agent Systems}
+    \item \textit{MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems}
+    \item \textit{ReAgent: Reversible Multi-Agent Reasoning for Knowledge-Enhanced Multi-Hop QA}
+    \item \textit{REALM-Bench: A Real-World Planning Benchmark for LLMs and Multi-Agent Systems}
+  
 \end{enumerate}
 
 \newpage
 
 \section{My Review of the Articles}
-This is where you will write your review for each of the articles listed above. The review can include your thoughts, analysis, strengths and weaknesses of each article, and any other relevant information.
+
+Recent advancements in Large Language Models (LLMs) have expanded their applications into \textbf{Multi-Agent Systems (MAS)}, where multiple LLMs collaborate or compete to solve complex tasks. These systems are being explored in various fields, including decision-making, planning, and real-world problem-solving. This review summarizes and analyzes six key papers that focus on different aspects of MAS, such as verification, collaboration, planning, and adaptability.
+
+\subsection{Making Multi-Agent Systems More Reliable}  
+One challenge with LLM-based agents is ensuring that their responses are correct and reliable. \textit{Multi-Agent Verification (MAV)} addresses this issue by introducing multiple verifiers to check outputs before finalizing a decision. This technique, similar to a panel of judges evaluating answers, significantly improves accuracy, particularly in fields like mathematics and coding. The \textit{BoN-MAV} method further demonstrates that even weaker verifiers, when combined, can enhance the performance of stronger models. This research highlights the potential of multi-agent collaboration in improving model reliability.
+
+\subsection{Evaluating How Agents Collaborate and Compete}  
+The \textit{MultiAgentBench} framework assesses how LLMs perform when working together, shifting the focus from single-agent tasks to multi-agent interactions. It introduces benchmarks that evaluate agent coordination, competition, and overall performance in structured environments such as collaborative coding, gaming, and strategic decision-making. By testing different coordination strategies, such as star, chain, tree, and graph networks, this study provides insights into optimizing teamwork among AI agents, paving the way for better-designed multi-agent systems.
+
+\subsection{Faster, More Adaptive Decision-Making}  
+Many real-world applications, including video games and logistics, require AI agents to adapt quickly to changing environments. The \textit{Parallelized Planning-Acting} approach improves upon traditional planning models by enabling agents to \textbf{plan and execute actions simultaneously}. This dual-thread system allows for more responsive decision-making, reducing delays and improving adaptability. The introduction of a centralized memory system for real-time updates further enhances coordination among agents, making this a significant step towards real-time AI collaboration.
+
+\subsection{Teaching LLMs to Build Multi-Agent Systems}  
+Instead of manually designing multi-agent systems, \textit{MAS-GPT} reframes this process as a \textbf{generative language task}. This means that instead of developers manually programming each agent’s behavior, an LLM can generate a fully functional MAS system in response to a given prompt. By automating the MAS-building process, this approach reduces development time and computational costs while improving efficiency. The research also highlights the importance of consistency in data generation to ensure coherent agent behavior.
+
+\subsection{Smarter Question Answering with Reversible Thinking}  
+Traditional AI models struggle with \textit{multi-hop question answering} (QA), where multiple pieces of information must be combined correctly. \textit{ReAgent} introduces a \textbf{reversible reasoning} technique that allows agents to backtrack and revise earlier steps if contradictions or errors are detected. This significantly improves accuracy in QA tasks, as errors do not propagate through the system. The framework also introduces modular agent roles—such as retrieval, verification, and assembly—creating a structured approach to multi-agent reasoning.
+
+\subsection{Real-World Planning Challenges for AI}  
+Many AI benchmarks focus on isolated, well-defined tasks, but real-world problems involve complex, unpredictable factors. \textit{REALM-Bench} introduces scenarios such as \textbf{urban ride-sharing, disaster relief logistics, and supply chain management}, testing how well AI handles resource constraints and unexpected disruptions. By incorporating multi-threaded planning and real-world constraints, this benchmark provides a more realistic evaluation of AI performance in dynamic settings.
+
+\section{Conclusion}  
+LLM-based multi-agent systems are rapidly evolving, providing new solutions for verification, collaboration, real-time adaptability, and planning. Approaches like \textit{MAV}, \textit{MultiAgentBench}, and \textit{MAS-GPT} contribute to more scalable and efficient MAS systems, while \textit{ReAgent} and \textit{REALM-Bench} focus on enhancing reasoning and real-world applicability. As AI research advances, integrating multiple agents with better coordination and adaptability will be key to solving complex, real-world problems.
 
 \end{document}
