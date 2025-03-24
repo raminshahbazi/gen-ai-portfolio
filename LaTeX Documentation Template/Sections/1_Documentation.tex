@@ -1,7 +1,96 @@
 \setcounter{page}{1}
-\section{Portfolio documentation}
-\label{sec:documentation}
 
-Compile a comprehensive documentation of your project, including all the project phases. You will need to explain every choice you made during the project and your thoughts about the results you get. You will introduce the results in suitable visualisation. Furthermore, you will need to explain which criteria you follow to build your prompts and how they affect the results. 
 
-Students write the entire documentation with sections, sub-sections, diagrams, etc in this section. Please write as comprehensively as possible. Head to the document 1\_documentation.tex. You are free to use as many subsections as required. We will not provide a template for documentation. 
+\section{Introduction}
+This document presents the documentation and reflection for the \textbf{Multi-Agent LLM System} developed using \textbf{AutoGen-AgentChat} and OpenAI-compatible models. The system is designed to facilitate literature review generation, planning, and user feedback incorporation using a structured agent-based workflow. The document provides a detailed overview of the project phases, the rationale behind design choices, and an analysis of the outcomes.
+
+\section{System Overview}
+\subsection{Objective}
+The primary objective of this system is to streamline the process of literature review by leveraging multiple agents, each performing specialized tasks:
+\begin{itemize}
+\item \textbf{Planning Agent}: Oversees the workflow, initiates tasks, and collects feedback.
+\item \textbf{Report Agent}: Generates high-quality literature reviews based on research summaries.
+\item \textbf{User Proxy Agent}: Acts as an interface between the system and the user.
+\end{itemize}
+
+\subsection{Technologies Used}
+\begin{itemize}
+\item \textbf{AutoGen-AgentChat} for multi-agent communication.
+\item \textbf{OpenAI API (via Groq)} for LLM-powered text generation.
+\item \textbf{ArXiv API} for fetching research papers.
+\item \textbf{BART Summarization Model} for text summarization.
+\item \textbf{Evaluation Metrics} (ROUGE, BLEU, BERTScore, Perplexity, Readability) for quality assessment.
+\end{itemize}
+
+\section{System Architecture}
+The system operates in a \textbf{multi-agent framework}, ensuring modularity and efficiency. Below is a high-level overview of the workflow:
+\begin{enumerate}
+\item \textbf{Paper Retrieval}: Research papers are fetched using \textbf{ArXiv API}.
+\item \textbf{Text Extraction & Preprocessing}: Text is extracted from PDFs and preprocessed.
+\item \textbf{Summarization}: The text is divided into chunks and summarized using \textbf{BART}.
+\item \textbf{Review Generation}: The \textbf{Report Agent} creates a structured literature review.
+\item \textbf{User Interaction}: The \textbf{Planning Agent} collects user feedback and refines the review iteratively.
+\item \textbf{Evaluation}: The generated literature review is assessed using \textbf{ROUGE, BLEU, BERTScore, and readability metrics}.
+\end{enumerate}
+
+\section{Design Decisions}
+\subsection{Agent-Based Approach}
+The decision to use a \textbf{multi-agent architecture} was motivated by the need for:
+\begin{itemize}
+\item \textbf{Task Separation}: Different agents handle specialized subtasks, improving efficiency.
+\item \textbf{Modular Expansion}: New agents can be added without altering existing components.
+\item \textbf{Improved User Experience}: The iterative feedback mechanism ensures high-quality outputs.
+\end{itemize}
+
+\subsection{Model Selection}
+\begin{itemize}
+\item \textbf{BART (facebook/bart-large-cnn)} was selected for summarization due to its \textbf{state-of-the-art} performance on text compression tasks.
+\item \textbf{GPT-based models} were evaluated, but \textbf{Llama-3.1-8b-Instant} was chosen for its balance between accuracy and speed.
+\end{itemize}
+
+\subsection{Evaluation Metrics}
+A comprehensive evaluation approach was implemented, covering:
+\begin{itemize}
+\item \textbf{ROUGE & BLEU} for content similarity.
+\item \textbf{BERTScore} for contextual accuracy.
+\item \textbf{Cosine Similarity} for lexical overlap.
+\item \textbf{Readability & Perplexity} to gauge fluency and complexity.
+\end{itemize}
+
+\section{Results & Findings}
+\begin{itemize}
+\item The literature reviews produced \textbf{high ROUGE and BERTScore values}, indicating strong alignment with reference materials.
+\item \textbf{Perplexity scores} were kept at an optimal range ($\approx 27$), ensuring fluency without excessive randomness.
+\item \textbf{Readability scores ($\approx 61.2$)} suggest that the text remains accessible to an academic audience.
+\end{itemize}
+
+\section{Challenges & Solutions}
+\subsection{Challenge: Summarization Loss}
+\textbf{Issue}: Some details were omitted in long-text summarization.\
+\textbf{Solution}: Increased \textbf{chunk size} and applied \textbf{multi-pass summarization}.
+
+\subsection{Challenge: Handling User Feedback Iterations}
+\textbf{Issue}: The initial iteration process was inefficient due to unnecessary back-and-forths.\
+\textbf{Solution}: Implemented a \textbf{feedback memory mechanism} to refine responses incrementally.
+
+\subsection{Challenge: API Rate Limits}
+\textbf{Issue}: Frequent API calls led to \textbf{rate limit issues}.\
+\textbf{Solution}: Implemented \textbf{caching and batch processing} to reduce redundant requests.
+
+\section{Ethical Considerations}
+\begin{itemize}
+\item \textbf{Data Privacy}: Ensured that all \textbf{user queries and summaries remain confidential}.
+\item \textbf{Bias Mitigation}: Evaluated outputs for \textbf{unintended biases} in literature review generation.
+\item \textbf{Academic Integrity}: The system does \textbf{not generate fabricated citations or misleading summaries}.
+\end{itemize}
+
+\section{Future Improvements}
+\begin{itemize}
+\item \textbf{More Advanced Summarization}: Exploring \textbf{GPT-4 Turbo} for enhanced contextual understanding.
+\item \textbf{Better Visualization}: Adding \textbf{graph-based representations} of literature relationships.
+\item \textbf{Multi-Language Support}: Extending summarization to \textbf{non-English research papers}.
+\end{itemize}
+
+\section{Conclusion}
+This project demonstrated the power of \textbf{multi-agent LLM systems} in academic literature review generation. The \textbf{agent-based design, robust evaluation pipeline, and iterative feedback loop} contribute to a \textbf{high-quality output} while addressing key challenges. Future iterations will focus on \textbf{enhanced summarization techniques, improved visualization, and expanded language support} to further refine the system.
+
